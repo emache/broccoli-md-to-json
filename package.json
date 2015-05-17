@@ -10,7 +10,9 @@
     "broccoli-filter": "^0.1.14",
     "broccoli-kitchen-sink-helpers": "^0.2.6",
     "broccoli-writer": "^0.1.1",
-    "glob": "^5.0.6"
+    "glob": "^5.0.6",
+    "js-yaml": "^3.3.1",
+    "marked": "^0.3.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
