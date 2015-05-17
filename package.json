@@ -7,7 +7,10 @@
     "broccoli": "^0.16.2"
   },
   "devDependencies": {
-    "broccoli-writer": "^0.1.1"
+    "broccoli-filter": "^0.1.14",
+    "broccoli-kitchen-sink-helpers": "^0.2.6",
+    "broccoli-writer": "^0.1.1",
+    "glob": "^5.0.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
