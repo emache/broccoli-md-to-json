@@ -1,13 +1,16 @@
 {
   "name": "broccoli-md-to-json",
   "version": "0.0.1",
-  "description": "Broccoli plugin to convert .md files to .json",
+  "description": "Work in progress: a broccoli plugin to convert .md files to .json",
   "main": "Brocfile.js",
   "dependencies": {
     "broccoli": "^0.16.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emache/broccoli-md-to-json.git"
+  },
   "devDependencies": {
-    "broccoli-filter": "^0.1.14",
     "broccoli-kitchen-sink-helpers": "^0.2.6",
     "broccoli-writer": "^0.1.1",
     "glob": "^5.0.6",

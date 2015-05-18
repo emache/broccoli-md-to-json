@@ -1,7 +1,6 @@
 var fs = require('fs');
 var path = require('path');
 var brocWriter = require('broccoli-writer');
-var brocFilter = require('broccoli-filter');
 var brocHelpers = require("broccoli-kitchen-sink-helpers");
 var marked = require('marked');
 var yaml = require('js-yaml');
