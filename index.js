@@ -45,7 +45,10 @@ Md2Json.prototype.write = function(readTree, destDir) {
             fs.mkdirSync(destPath);
         }
 
-        var inputFiles = brocHelpers.multiGlob(self.inputFiles, { cwd: srcDir });
+        var inputFiles = brocHelpers.multiGlob(
+            self.inputFiles,
+            { cwd: srcDir }
+        );
 
         inputFiles.forEach(function (file) {
             
@@ -56,18 +59,19 @@ Md2Json.prototype.write = function(readTree, destDir) {
 
             if (stat && stat.isFile()) {
                 var item = loadFile(filePath);
-                fs.writeFileSync(path.join(destPath, fileName + '.json'), JSON.stringify(item));
-                index.push(
-                    {
-                        title: item.title,
-                        someOtherMetaData : item.someOtherMetaData,
-                        featuredImgUrl: item.featuredImgUrl,
-                        slug: fileName
-                    });
+                fs.writeFileSync(
+                    path.join(destPath, fileName + '.json'),
+                    JSON.stringify(item)
+                );
+                
+                generateIndex(self.options.indexData, fileName, item, index);
             }
         });
 
-        fs.writeFileSync(path.join(destPath, 'index.json'), JSON.stringify(index));
+        fs.writeFileSync(
+            path.join(destPath, 'index.json'),
+            JSON.stringify(index)
+        );
   });
 };
 
@@ -78,6 +82,20 @@ var loadFile = function (ymlName) {
     var item = yaml.safeLoad(data.substr(0, dividerPos));
     item.description = marked(data.substr(dividerPos + 6));
     return item;
+};
+
+var generateIndex = function(metaData, fileName, item, indexArray){
+    var reducedItem = {};
+
+    for (var i=0; i < metaData.length; i++) {
+        if (item.hasOwnProperty(metaData[i])) {
+            reducedItem[metaData[i]] = item[metaData[i]];
+        }
+    }
+
+    reducedItem.slug = fileName;
+    
+    indexArray.push(reducedItem);
 };
 
 module.exports = Md2Json;
