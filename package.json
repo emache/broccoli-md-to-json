@@ -2,7 +2,7 @@
   "name": "broccoli-md-to-json",
   "version": "0.0.1",
   "description": "Work in progress: a broccoli plugin to convert .md files to .json",
-  "main": "Brocfile.js",
+  "main": "index.js",
   "dependencies": {
     "broccoli": "^0.16.2",
     "broccoli-kitchen-sink-helpers": "^0.2.6",
