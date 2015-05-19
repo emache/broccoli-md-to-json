@@ -4,7 +4,7 @@ var brocWriter = require('broccoli-writer');
 var brocHelpers = require("broccoli-kitchen-sink-helpers");
 var marked = require('marked');
 var yaml = require('js-yaml');
-
+var mkdirp = require('mkdirp');
 
 
 var Md2Json = function Md2Json(inTree,options) {
@@ -41,7 +41,7 @@ Md2Json.prototype.write = function(readTree, destDir) {
         }
 
         if (!fs.existsSync(destPath)) {
-            fs.mkdirSync(destPath);
+            mkdirp.sync(destPath);
         }
 
         var inputFiles = brocHelpers.multiGlob(
@@ -96,5 +96,6 @@ var generateIndex = function(metaData, fileName, item, indexArray){
     
     indexArray.push(reducedItem);
 };
+
 
 module.exports = Md2Json;

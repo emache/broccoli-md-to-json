@@ -9,14 +9,14 @@
     "broccoli-writer": "^0.1.1",
     "glob": "^5.0.6",
     "js-yaml": "^3.3.1",
-    "marked": "^0.3.3"
+    "marked": "^0.3.3",
+    "mkdirp": "^0.5.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/emache/broccoli-md-to-json.git"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
