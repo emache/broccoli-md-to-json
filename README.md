@@ -13,7 +13,7 @@ This plugin is part of my workflow to use Ember-Cli without a back-end, for prot
 This plugin isn't published on npm (yet). To use this, install using the tarball url `npm install <tarball url>`
 
 ```
-npm install https://github.com/emache/broccoli-md-to-json/tarball/master --save-dev  
+npm install https://github.com/emache/broccoli-md-to-json/tarball/v0.0.1 --save-dev  
 ```
 
 ## Description
