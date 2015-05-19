@@ -3,7 +3,7 @@
 Converts each individual markdown files into an individual json file. This plugin also generates an index.json containing a selected set of data from all markdown files.
 
 
-** ! This is a work in progress ! **
+**! This is a work in progress !**
 
 This plugin is part of my workflow to use Ember-Cli without a back-end, for prototyping purposes. More info coming up soon.
 
@@ -39,7 +39,7 @@ The plugin will create a Json file looking like this for each markdown file:
 AND it will generate an `index.json` file which contains information for all the markdown file. Which information is included in the file is controlled through the plugin options. A slug property is also generated using the original markdown file name.
 
 ```javascript
-[{"title":"This project has a fancy title", "author":"Jimmy","headline":"Because it's so special","slug":"project-1-name"},
+[{"title":"This project has a fancy title", "author":"Jimmy","headline":"Because it's so special","slug":"project-1-name"}]
 ```
 
 ## Usage
