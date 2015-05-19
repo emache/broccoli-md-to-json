@@ -1,10 +1,20 @@
 {
   "name": "broccoli-md-to-json",
   "version": "0.0.1",
-  "description": "Work in progress: a broccoli plugin to convert .md files to .json",
+  "description": "A Broccoli plugin that converts .md files into json files; and generates an index.json.",
   "main": "index.js",
+  "author": "Marie Lu Vinh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emache/broccoli-md-to-json.git"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "javascript",
+    "emberJS"
+  ],
   "dependencies": {
-    "broccoli": "^0.16.2",
     "broccoli-kitchen-sink-helpers": "^0.2.6",
     "broccoli-writer": "^0.1.1",
     "glob": "^5.0.6",
@@ -12,14 +22,10 @@
     "marked": "^0.3.3",
     "mkdirp": "^0.5.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/emache/broccoli-md-to-json.git"
-  },
-  "devDependencies": {},
+  "devDependencies": {
+    "broccoli": "^0.16.2"
+    },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
